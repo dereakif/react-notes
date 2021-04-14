@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import useCounter from "../hooks/useCounter";
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, decrement, increment] = useCounter();
   return (
     <div className="counterContainer">
       <div>{count}</div>
-      <button onClick={() => setCount(count - 1)}>-</button>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button {...decrement}>-</button>
+      <button {...increment}>+</button>
     </div>
   );
 }
