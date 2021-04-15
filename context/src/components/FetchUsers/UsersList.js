@@ -5,8 +5,9 @@ function UsersList() {
   const users = useContext(UsersContext);
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      {users.map((user) => (
+      {users.map((user, i) => (
         <div
+          key={i}
           style={{
             border: "1px solid black",
             margin: "1rem",
