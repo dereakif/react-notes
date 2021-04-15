@@ -4,6 +4,7 @@ import Todo from "./Pages/Todo/Todo";
 import "./App.css";
 import ThemeChanger from "./Pages/ThemeChanger/ThemeChanger";
 import Home from "./Pages/Home/Home";
+import FetchUsers from "./components/FetchUsers/FetchUsers";
 
 export default function App() {
   return (
@@ -48,6 +49,17 @@ export default function App() {
           >
             Theme Changer (class comp.)
           </Link>
+          <Link
+            to="/users"
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              textDecoration: "none",
+              fontSize: "1.5rem",
+            }}
+          >
+            Fetch Users (func comp.)
+          </Link>
         </nav>
 
         <Switch>
@@ -56,6 +68,9 @@ export default function App() {
           </Route>
           <Route path="/themechanger">
             <ThemeChanger />
+          </Route>
+          <Route path="/users">
+            <FetchUsers />
           </Route>
           <Route path="/">
             <Home />
